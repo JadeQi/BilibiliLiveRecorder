@@ -12,7 +12,7 @@
 	</properties>
 	<build>
 		<sourceDirectory>${basedir}\src\main\java</sourceDirectory>
-		<testSourceDirectory>${basedir}\src\test\java</testSourceDirectory>
+<!--		<testSourceDirectory>${basedir}\src\test\java</testSourceDirectory>-->
 		<resources>
 			<resource>
 				<directory>src/main/resources</directory>
@@ -36,15 +36,29 @@
 				<artifactId>maven-assembly-plugin</artifactId>
 				<version>2.5.5</version>
 				<configuration>
+					<!-- get all project dependencies -->
+					<descriptorRefs>
+						<descriptorRef>jar-with-dependencies</descriptorRef>
+					</descriptorRefs>
+					<!-- MainClass in mainfest make a executable jar -->
 					<archive>
 						<manifest>
 							<mainClass>nicelee.bilibili.Main</mainClass>
 						</manifest>
 					</archive>
-					<descriptorRefs>
-						<descriptorRef>jar-with-dependencies</descriptorRef>
-					</descriptorRefs>
 				</configuration>
+				<executions>
+					<!-- 配置执行器 -->
+					<execution>
+						<id>make-assembly</id>
+						<!-- 绑定到package命令的生命周期上 -->
+						<phase>package</phase>
+						<goals>
+							<!-- 只运行一次 -->
+							<goal>single</goal>
+						</goals>
+					</execution>
+				</executions>
 			</plugin>
 		</plugins>
 	</build>
