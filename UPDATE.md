@@ -1,4 +1,23 @@
 ## 更新  
++ V2.23.0
+    * 新增：提供工具实现合并FLV功能，目的是解决分离视频时出现`只有声音`、`分辨率不对`的问题
+    * 新增: [#91](https://github.com/nICEnnnnnnnLee/BilibiliLiveRecorder/issues/91),[#102](https://github.com/nICEnnnnnnnLee/BilibiliLiveRecorder/issues/102), 针对花屏，新增在校验时去掉前`contentFramesToSkip`个内容帧的功能
+    * 优化：首帧时间戳间隔由`30`s固定值改为`maxPeriodBetween2Frame` ms  
+        + 原理：在前10帧里，初始为0，后续如果某帧相比前一帧间隔过大，则选取该帧时间戳作为初始时间戳。
+        
++ V2.22.0
+    * 修复[#93](https://github.com/nICEnnnnnnnLee/BilibiliLiveRecorder/issues/93)、[#96](https://github.com/nICEnnnnnnnLee/BilibiliLiveRecorder/issues/96), 修复一个cookie转换问题，该问题导致cookie中存在字符`|`时会出现错误
++ V2.21.0
+    * 修复[#94](https://github.com/nICEnnnnnnnLee/BilibiliLiveRecorder/issues/94), 修复YY直播
+    * 修复[#93](https://github.com/nICEnnnnnnnLee/BilibiliLiveRecorder/issues/93), 抖音直播新增另一种备用解析方式, 注意`liver=douyin2`, cookie文件名为`douyin2-cookie.txt`
+    * 修复抖音直播传入短链接`https://v.douyin.com/xxxx`的解析方式
+    
++ V2.20.0
+    * 将POST方式查询视频源时的HTTP连接超时时间改为20s
++ V2.19.0
+    * 修复[#87](https://github.com/nICEnnnnnnnLee/BilibiliLiveRecorder/issues/87)：修复虎牙录制
++ V2.18.1
+    * 修复[#86](https://github.com/nICEnnnnnnnLee/BilibiliLiveRecorder/issues/86)：适配最新抖音版本 
 + V2.18.0
     * 修复[#72](https://github.com/nICEnnnnnnnLee/BilibiliLiveRecorder/issues/72)：修复斗鱼部分区域获取链接为m3u8的问题  
 + V2.17.0
