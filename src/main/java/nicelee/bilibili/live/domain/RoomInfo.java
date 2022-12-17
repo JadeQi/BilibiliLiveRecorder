@@ -2,6 +2,9 @@ package nicelee.bilibili.live.domain;
 
 import java.lang.reflect.Field;
 
+/**
+ * 房间信息
+ */
 public class RoomInfo {
 
 	String shortId; // 直播url 里面的id， 可能与roomId相同
@@ -11,8 +14,8 @@ public class RoomInfo {
 	int liveStatus; // 1 直播; 2 轮播视频; 0 啥也没有播
 	String title;
 	String description;
-	String[] acceptQuality;
-	String[] acceptQualityDesc;
+	String[] acceptQuality; // 画质清晰度 0; 4000; ...
+	String[] acceptQualityDesc; // 画质清晰度 蓝光8M; 蓝光4M; ...
 	
 	String remark; // douyu: 保存加密函数
 	

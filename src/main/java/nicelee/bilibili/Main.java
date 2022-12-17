@@ -30,7 +30,8 @@ public class Main {
 //		args = new String[] {
 //				"plugin=true&debug=false&check=true&retryAfterMinutes=0.5&retryIfLiveOff=true&liver=douyu&qnPri=蓝光4M>高清>蓝光8M>超清>蓝光>流畅&qn=-1&id=262537&fileName=测试{liver}-{name}-{startTime}-{endTime}-{seq}&" }; // 清晰度全部可选，但部分高清需要cookie
 //		args = new String[] { "debug=true&check=true&liver=kuaishou&id=3xh62hmw79fmc32&qn=0&delete=false&fileName=测试{liver}-{name}-{startTime}-{endTime}-{seq}&timeFormat=yyyyMMddHHmm" }; // 清晰度全部可选，可不需要cookie
-//		args = new String[]{"debug=true&check=true&liver=huya&id=11342412"}; 				// 清晰度全部可选，可不需要cookie 
+		args = new String[]{"debug=true&check=true&liver=huya&id=222523"}; 				// 清晰度全部可选，可不需要cookie
+//		args = new String[]{"debug=true&check=true&liver=douyu&id=666743"}; 				// 清晰度全部可选，可不需要cookie
 //		args = new String[]{"debug=true&check=false&liver=yy&id=1355306560"}; 		// 清晰度全部可选，可不需要cookie
 //		args = new String[]{"debug=true&check=true&liver=yy&id=28581146"}; 		// 清晰度全部可选，可不需要cookie
 //		args = new String[]{"debug=true&check=true&liver=yy&id=29216766"}; 		// 清晰度全部可选，可不需要cookie

@@ -61,6 +61,7 @@ public class RoomDealerHuya extends RoomDealer {
 			// 真实房间id
 			roomInfo.setRoomId(shortId);
 
+			// 获取直播间标题
 			roomInfo.setDescription(room.getString("introduction"));
 
 			// 房间主id
@@ -70,6 +71,7 @@ public class RoomDealerHuya extends RoomDealer {
 			matcher = pJson.matcher(html);
 			matcher.find();
 			//System.out.println(matcher.group(1));
+			// 获取网页源代码中, hyPlayerConfig的配置信息
 			JSONObject obj = new JSONObject(matcher.group(1));
 			if(roomInfo.getLiveStatus() == 1) {
 //				String stream = obj.getString("stream");
